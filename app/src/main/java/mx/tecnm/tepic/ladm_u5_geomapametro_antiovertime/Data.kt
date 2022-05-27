@@ -4,6 +4,7 @@ import com.google.firebase.firestore.GeoPoint
 
 class Data {
     var nombre : String = ""
+    var descripcion : String = ""
     var posicion1 :GeoPoint = GeoPoint(0.0,0.0)
     var posicion2 :GeoPoint = GeoPoint(0.0,0.0)
 

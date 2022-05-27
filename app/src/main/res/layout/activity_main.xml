@@ -5,49 +5,91 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
+    android:background="@drawable/background"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
 
-        <ImageView
-            android:id="@+id/imagen4"
-            android:layout_width="250dp"
-            android:src="@drawable/plantas2"
-            android:layout_height="110dp"
-            android:layout_marginLeft="300dp"/>
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:padding="10dp"
             android:textStyle="bold"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
             android:textAlignment="center"
-            android:textColor="#000000"
+            android:textColor="#DFDFDF"
             android:text="Estás en" />
         <ImageView
+            android:id="@+id/imagen7"
+            android:src="@drawable/arrow"
+            android:layout_below="@id/textView4"
+            android:layout_width="70dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="310dp"
+            android:layout_height="50dp"/>
+        <ImageView
         android:id="@+id/imagen3"
-        android:layout_width="250dp"
-        android:src="@drawable/metropolitano"
-        android:layout_height="450dp"
-            android:layout_marginLeft="60dp"/>
+        android:layout_width="300dp"
+            android:layout_marginTop="40dp"
+
+
+            android:layout_below="@+id/textView4"
+        android:layout_height="200dp"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/imagen2"
+            android:layout_below="@id/textView4"
+            android:layout_width="160dp"
+            android:foreground="#2C2C2C"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="165dp"
+            android:alpha="0.7"
+            android:layout_height="120dp"/>
 
         <ImageView
             android:id="@+id/imagen1"
-            android:layout_width="250dp"
+            android:layout_width="300dp"
+            android:layout_below="@+id/textView4"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="45dp"
+            android:layout_height="200dp"/>
 
-            android:layout_height="450dp"/>
-        <ImageView
-            android:id="@+id/imagen2"
-            android:layout_toRightOf="@+id/imagen1"
-            android:layout_width="250dp"
-            android:layout_height="450dp"/>
-        <ImageView
-            android:id="@+id/imagen5"
-            android:src="@drawable/plantas3"
-            android:layout_width="420dp"
+        <ScrollView
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="380dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="50dp"
+            >
+                <RelativeLayout android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/descripcion"
+            android:layout_width="370dp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/imagen1"
-            android:layout_height="650dp"/>
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="Información Relevante:"
+            android:textColor="@color/black"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/descripcion2"
+            android:layout_width="370dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/descripcion"
+            android:textSize="18sp"
+            android:layout_marginLeft="30dp"
+            android:text="El parque Metropolitano es un espacio abierto para toda la sociedad nayarita, el cual cuenta con áreas verdes para niños, juegos recreativos, canchas deportivas y áreas verdes en el cual se programan diversos programas culturales.
+                \n Roberto Sandoval Castañeda inauguró el parque metropolitano y además contó con la presencia del medallista olímpico mexicano, Ernesto Cano, quien se mostró contento ante el anuncio hecho por el alcalde, a través del cual comunicó la construcción de una alberca semi-olímpica en las instalaciones de este centro recreativo."
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"/>
+                </RelativeLayout>
+        </ScrollView>
 </RelativeLayout>
