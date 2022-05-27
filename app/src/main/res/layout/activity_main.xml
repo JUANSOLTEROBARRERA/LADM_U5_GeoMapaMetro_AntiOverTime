@@ -78,7 +78,7 @@
             android:textColor="@color/black"
             android:layout_marginTop="0dp"
             android:layout_marginLeft="30dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/descripcion2"
             android:layout_width="370dp"
