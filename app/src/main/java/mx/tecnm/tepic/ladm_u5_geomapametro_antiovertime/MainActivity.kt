@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             binding.imagen2.setOnClickListener {
-                if(binding.textView4.text.toString()=="Estás en la cancha") {
+                if(binding.textView4.text.toString()=="Estás en cancha") {
                     if (bandera) {
                         binding.imagen1.setImageResource(R.drawable.cancha2)
                         binding.imagen2.setImageResource(R.drawable.cancha1)
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                         bandera = true
                     }
                 }
-                if(binding.textView4.text.toString()=="Estás en los negocios") {
+                if(binding.textView4.text.toString()=="Estás en negocios") {
                     if (bandera) {
                         binding.imagen1.setImageResource(R.drawable.negocios2)
                         binding.imagen2.setImageResource(R.drawable.negocios1)
@@ -79,7 +79,7 @@ class MainActivity : AppCompatActivity() {
                         bandera = true
                     }
                 }
-                if(binding.textView4.text.toString()=="Estás en el sombrero") {
+                if(binding.textView4.text.toString()=="Estás en sombrero") {
                     if (bandera) {
                         binding.imagen1.setImageResource(R.drawable.sombrero2)
                         binding.imagen2.setImageResource(R.drawable.sombrero1)
@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
                         bandera = true
                     }
                 }
-                if(binding.textView4.text.toString()=="Estás en el estacionamiento") {
+                if(binding.textView4.text.toString()=="Estás en estacionamiento") {
                     if (bandera) {
                         binding.imagen1.setImageResource(R.drawable.estacionamiento2)
                         binding.imagen2.setImageResource(R.drawable.estacionamiento1)
@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity() {
                         bandera = true
                     }
                 }
-                if(binding.textView4.text.toString()=="Estás en la entrada") {
+                if(binding.textView4.text.toString()=="Estás en entrada") {
                     if (bandera) {
                         binding.imagen1.setImageResource(R.drawable.entrada2)
                         binding.imagen2.setImageResource(R.drawable.entrada1)
@@ -112,7 +112,7 @@ class MainActivity : AppCompatActivity() {
                         bandera = true
                     }
                 }
-                if(binding.textView4.text.toString()=="Estás en las fuentes") {
+                if(binding.textView4.text.toString()=="Estás en fuentes") {
                     if (bandera) {
                         binding.imagen1.setImageResource(R.drawable.fuentes2)
                         binding.imagen2.setImageResource(R.drawable.fuentes1)
@@ -139,25 +139,12 @@ class Oyente(puntero:MainActivity) : LocationListener {
         p.binding.imagen2.visibility = View.GONE
         p.binding.imagen3.visibility = View.VISIBLE
         //p.binding.textView3.setText("${location.latitude}, ${location.longitude}")
-        p.binding.textView4.visibility = View.GONE
-        p.binding.imagen5.visibility = View.GONE
-        p.binding.textView5.setText("Estás en el parque Metropolitano.")
+        p.binding.textView4.setText("Estás en el parque Metropolitano.")
         var geoPosicionGPS = GeoPoint(location.latitude, location.longitude)
 
         for(item in p.posicion){
             if(item.estoyEn(geoPosicionGPS)){
-                p.binding.textView4.visibility = View.VISIBLE
-                p.binding.imagen5.visibility = View.VISIBLE
-                p.binding.textView5.visibility = View.GONE
-                p.binding.imagen6.visibility = View.GONE
-                when(item.nombre){
-                    "cancha"->p.binding.textView4.setText("Estás en la ${item.nombre}")
-                    "negocios"->p.binding.textView4.setText("Estás en los ${item.nombre}")
-                    "sombrero"->p.binding.textView4.setText("Estás en el ${item.nombre}")
-                    "estacionamiento"->p.binding.textView4.setText("Estás en el ${item.nombre}")
-                    "entrada"->p.binding.textView4.setText("Estás en la ${item.nombre}")
-                    "fuentes"->p.binding.textView4.setText("Estás en las ${item.nombre}")
-                }
+                p.binding.textView4.setText("Estás en ${item.nombre}")
             }
         }
 
@@ -165,42 +152,42 @@ class Oyente(puntero:MainActivity) : LocationListener {
     }
 
     private fun agregarfotos(texto: String) {
-        if(texto=="Estás en la cancha"){
+        if(texto=="Estás en cancha"){
             p.binding.imagen1.visibility = View.VISIBLE
             p.binding.imagen2.visibility = View.VISIBLE
             p.binding.imagen3.visibility = View.GONE
             p.binding.imagen1.setImageResource(R.drawable.cancha1)
             p.binding.imagen2.setImageResource(R.drawable.cancha2)
         }
-        if(texto=="Estás en los negocios"){
+        if(texto=="Estás en negocios"){
             p.binding.imagen1.visibility = View.VISIBLE
             p.binding.imagen2.visibility = View.VISIBLE
             p.binding.imagen3.visibility = View.GONE
             p.binding.imagen1.setImageResource(R.drawable.negocios1)
             p.binding.imagen2.setImageResource(R.drawable.negocios2)
         }
-        if(texto=="Estás en el sombrero"){
+        if(texto=="Estás en sombrero"){
             p.binding.imagen1.visibility = View.VISIBLE
             p.binding.imagen2.visibility = View.VISIBLE
             p.binding.imagen3.visibility = View.GONE
             p.binding.imagen1.setImageResource(R.drawable.sombrero1)
             p.binding.imagen2.setImageResource(R.drawable.sombrero2)
         }
-        if(texto=="Estás en el estacionamiento"){
+        if(texto=="Estás en estacionamiento"){
             p.binding.imagen1.visibility = View.VISIBLE
             p.binding.imagen2.visibility = View.VISIBLE
             p.binding.imagen3.visibility = View.GONE
             p.binding.imagen1.setImageResource(R.drawable.estacionamiento1)
             p.binding.imagen2.setImageResource(R.drawable.estacionamiento2)
         }
-        if(texto=="Estás en la entrada"){
+        if(texto=="Estás en entrada"){
             p.binding.imagen1.visibility = View.VISIBLE
             p.binding.imagen2.visibility = View.VISIBLE
             p.binding.imagen3.visibility = View.GONE
             p.binding.imagen1.setImageResource(R.drawable.entrada1)
             p.binding.imagen2.setImageResource(R.drawable.entrada2)
         }
-        if(texto=="Estás en las fuentes"){
+        if(texto=="Estás en fuentes"){
             p.binding.imagen1.visibility = View.VISIBLE
             p.binding.imagen2.visibility = View.VISIBLE
             p.binding.imagen3.visibility = View.GONE
